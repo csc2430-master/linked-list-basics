@@ -59,7 +59,7 @@ int main() {
                 ss >> item;
                 ss >> after;
                 if (ss.fail()) {
-                    cerr << "You need to enter two numbers after 'I'" <<endl;
+                    cerr << "You need to enter two numbers after 'A'" <<endl;
                 }
                 else {
                     if (!InsertAfter(item, after, head)) {
@@ -70,7 +70,7 @@ int main() {
             case 'D':
                 ss >> item;
                 if (ss.fail()) {
-                    cerr << "You need to enter a number after 'R'" <<endl;
+                    cerr << "You need to enter a number after 'D'" <<endl;
                 }
                 else {
                     if (!RemoveItem( item, &head )) {
