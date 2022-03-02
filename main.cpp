@@ -41,7 +41,7 @@ int main() {
         int item;
         int after;
 
-        cout << "Enter P(repend) number, I(nsert) number after, R(emove) number, D(isplay), or E(xit)";
+        cout << "Enter P(repend) number, A(Insert) number after, D(Remove) number, O(utput), or E(xit)";
         getline(cin, line);
         ss.str(line);
         ss >> command;
@@ -55,7 +55,7 @@ int main() {
                     Prepend( item, &head );
                 }
                 break;
-            case 'I':
+            case 'A':
                 ss >> item;
                 ss >> after;
                 if (ss.fail()) {
@@ -67,7 +67,7 @@ int main() {
                     }
                 }
                 break;
-            case 'R':
+            case 'D':
                 ss >> item;
                 if (ss.fail()) {
                     cerr << "You need to enter a number after 'R'" <<endl;
@@ -78,7 +78,7 @@ int main() {
                     }
                 }
                 break;
-            case 'D':
+            case 'O':
                 Print( head );
                 break;
             case 'E':
