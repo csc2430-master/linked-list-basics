@@ -25,7 +25,7 @@ public:
 
 void Prepend(int item, Node** ptrToHead);
 bool InsertAfter(int itemToInsert, int afterItem, Node* head);
-bool Remove(int item, Node** ptrToHead);
+bool RemoveItem(int item, Node** ptrToHead);
 void Print(Node* head);
 bool RemoveNotInHead(int item, Node* head);
 Node* FindItem(int item, Node* head);
@@ -73,7 +73,7 @@ int main() {
                     cerr << "You need to enter a number after 'R'" <<endl;
                 }
                 else {
-                    if (!Remove( item, &head )) {
+                    if (!RemoveItem( item, &head )) {
                         cerr << item << " does not appear in the list" << endl;
                     }
                 }
@@ -113,7 +113,7 @@ bool InsertAfter(int itemToInsert, int afterItem, Node* head) {
     return false;
 }
 
-bool Remove(int item, Node** ptrToHead) {
+bool RemoveItem(int item, Node** ptrToHead) {
     Node* head = *ptrToHead;
 
     if (nullptr == head) {
